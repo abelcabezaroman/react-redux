@@ -1,13 +1,15 @@
-import characterReducer from './characterReducer';
+import charactersReducer from './charactersReducer';
 import counterReducer from './counterReducer';
-import todoReducer from './todoReducer';
+import todosReducer from './todosReducer';
 import {combineReducers} from 'redux';
+import chatBotReducer from './chatBotReducer';
 
 //Combine all the sub reducers
 const rootReducer = combineReducers({
-    characters: characterReducer,
+    characters: charactersReducer,
     counter: counterReducer,
-    todos:todoReducer
+    todos: todosReducer,
+    chatBot: chatBotReducer
 })
 
 export default rootReducer

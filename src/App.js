@@ -3,6 +3,7 @@ import Counter from './components/Counter';
 import TodoList from './components/TodoList';
 import NameCard from './components/NameCard';
 import { useSelector } from "react-redux";
+import ChatBot from './components/ChatBot';
 
 function App() {
     const state = useSelector(state => state);
@@ -21,6 +22,10 @@ console.log('##ABEL## >> App >>  App', state);
 
                 {/* Please check /views/TodoList.js for detail*/}
                 <TodoList/>
+
+                <div className="divider"></div>
+
+                <ChatBot/>
             </main>
         </div>
     );

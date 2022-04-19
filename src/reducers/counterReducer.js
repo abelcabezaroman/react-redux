@@ -1,24 +1,19 @@
 const initState = 5
+
 const counterReducer = (state = initState, action) => {
-    console.log('##ABEL## >> s >>  counterReducer', state);
     switch (action.type) {
-        case 'INCREMENT_COUNT':
+        case 'INCREMENT_COUNTER':
             return state + 1
-
-        case 'INCREMENT_COUNT_TEN':
+        case 'INCREMENT_COUNTER_TEN':
             return state + 10
-        case 'DOUBLE_COUNT':
+        case 'DOUBLE_COUNTER':
             return state * 2
-
-        case 'DECREMENT_COUNT_TEN':
+        case 'DECREMENT_COUNTER_TEN':
             return state - 10
-
-        case 'DECREMENT_COUNT':
+        case 'DECREMENT_COUNTER':
             return state - 1
-
-        case 'RESET_COUNT':
+        case 'RESET_COUNTER':
             return 0
-
         default:
             return state
     }

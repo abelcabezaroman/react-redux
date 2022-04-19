@@ -11,7 +11,7 @@ const initState =  [
         }
     ]
 
-const todoReducer = (state = initState, action) => {
+const todosReducer = (state = initState, action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [
@@ -25,4 +25,4 @@ const todoReducer = (state = initState, action) => {
     }
 }
 
-export default todoReducer;
+export default todosReducer;

@@ -6,7 +6,7 @@ const initState = {
 }
 
 //Define Actions
-const characterReducer = (state = initState, action) => {
+const charactersReducer = (state = initState, action) => {
     switch (action.type) {
             //Change character name
         case 'CHANGE_NAME':
@@ -30,4 +30,4 @@ const characterReducer = (state = initState, action) => {
     }
 }
 
-export default characterReducer;
+export default charactersReducer;
