@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Counter from './components/Counter';
+import TodoList from './components/TodoList';
+import NameCard from './components/NameCard';
+import { useSelector } from "react-redux";
+import ChatBot from './components/ChatBot';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const state = useSelector(state => state);
+console.log('##ABEL## >> App >>  App', state);
+    return (
+        <div className="App">
+            <main className="container">
+
+                <Counter/>
+
+                <div className="divider"></div>
+
+                <NameCard/>
+
+                <div className="divider"></div>
+
+                {/* Please check /views/TodoList.js for detail*/}
+                <TodoList/>
+
+                <div className="divider"></div>
+
+                <ChatBot/>
+            </main>
+        </div>
+    );
 }
 
 export default App;
